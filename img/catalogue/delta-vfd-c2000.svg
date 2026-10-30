@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="100%" height="100%">
+    <defs>
+        <!-- Background Gradient -->
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f172a"/>
+            <stop offset="50%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#090d16"/>
+        </linearGradient>
+        <!-- Body Gradient -->
+        <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#0f172a"/>
+        </linearGradient>
+        <!-- Ambient Glow -->
+        <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#0284c7" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+        </radialGradient>
+        <!-- Tech Grid Pattern -->
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.7" opacity="0.35"/>
+        </pattern>
+    </defs>
+
+    <!-- Canvas Background -->
+    <rect width="480" height="400" fill="url(#bgGrad)"/>
+    <rect width="480" height="400" fill="url(#glow)"/>
+    <rect width="480" height="400" fill="url(#grid)"/>
+
+    <!-- Subtle Tech Borders -->
+    <rect x="15" y="15" width="450" height="370" rx="8" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+    <!-- Hardware Illustration -->
+    
+            <!-- Drive Body -->
+            <rect x="135" y="65" width="210" height="270" rx="10" fill="url(#bodyGrad)" stroke="#475569" stroke-width="3"/>
+            <!-- Top Cooling Fins -->
+            <line x1="150" y1="80" x2="330" y2="80" stroke="#334155" stroke-width="4"/>
+            <line x1="150" y1="92" x2="330" y2="92" stroke="#334155" stroke-width="4"/>
+            <!-- Digital Keypad / 7-Segment Display -->
+            <rect x="160" y="110" width="160" height="70" rx="6" fill="#020617" stroke="#1e293b"/>
+            <text x="180" y="155" font-family="Courier,monospace" font-size="34" fill="#ef4444" font-weight="bold" letter-spacing="4">50.00</text>
+            <text x="285" y="135" font-family="Arial,sans-serif" font-size="10" fill="#22c55e" font-weight="bold">Hz</text>
+            <!-- Potentiometer Knob -->
+            <circle cx="200" cy="215" r="22" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
+            <line x1="200" y1="215" x2="212" y2="200" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+            <!-- Keypad Buttons -->
+            <rect x="240" y="195" width="35" height="20" rx="3" fill="#22c55e"/>
+            <text x="247" y="209" font-family="Arial,sans-serif" font-size="10" fill="#fff" font-weight="bold">RUN</text>
+            <rect x="285" y="195" width="35" height="20" rx="3" fill="#ef4444"/>
+            <text x="290" y="209" font-family="Arial,sans-serif" font-size="10" fill="#fff" font-weight="bold">STOP</text>
+            <rect x="240" y="222" width="35" height="18" rx="3" fill="#334155"/>
+            <text x="248" y="235" font-family="Arial,sans-serif" font-size="9" fill="#fff">MODE</text>
+            <rect x="285" y="222" width="35" height="18" rx="3" fill="#334155"/>
+            <text x="291" y="235" font-family="Arial,sans-serif" font-size="9" fill="#fff">ENTER</text>
+            <!-- Bottom Vent / Terminal Cover -->
+            <rect x="150" y="260" width="180" height="60" rx="4" fill="#0f172a"/>
+            <line x1="165" y1="275" x2="315" y2="275" stroke="#334155" stroke-width="2"/>
+            <line x1="165" y1="288" x2="315" y2="288" stroke="#334155" stroke-width="2"/>
+            <line x1="165" y1="301" x2="315" y2="301" stroke="#334155" stroke-width="2"/>
+            
+
+    <!-- Product Title Badge at Bottom -->
+    <rect x="30" y="340" width="420" height="36" rx="6" fill="#0b1329" stroke="#1e293b"/>
+    <text x="45" y="363" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">DELTA VFD - C2000 Plus</text>
+    <text x="435" y="363" text-anchor="end" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f59e0b">High Performance Vector</text>
+</svg>

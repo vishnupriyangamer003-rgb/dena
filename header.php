@@ -1,14 +1,16 @@
 <?php
 require_once __DIR__ . '/inc-frontend.php';
+$headerEmail = fe_setting($conn, 'site_email', 'info@dena.co.in');
+$headerPhone = fe_setting($conn, 'site_phone1', '+91 97877 74321');
 
 if (!isset($pageTitle)) {
-    $pageTitle = 'Digitech Electrical & Automations (DENA) - Electrical, Control Panel & Industrial Automation Solutions';
+    $pageTitle = 'Digitech Electrical & Automations - Electrical, Control Panel & Industrial Automation Solutions';
 }
 if (!isset($metaDescription)) {
-    $metaDescription = 'DENA (Digitech Electrical & Automations) delivers reliable electrical, control panel and industrial automation solutions - PLC, HMI, SCADA, drives and panel manufacturing for modern industries.';
+    $metaDescription = 'Digitech Electrical & Automations delivers reliable electrical, control panel and industrial automation solutions - PLC, HMI, SCADA, drives and panel manufacturing for modern industries.';
 }
 if (!isset($metaKeywords)) {
-    $metaKeywords = 'electrical control panels, industrial automation, PLC programming, SCADA, HMI, VFD drives, panel manufacturing, DENA, Digitech Electrical Automations, Karur';
+    $metaKeywords = 'electrical control panels, industrial automation, PLC programming, SCADA, HMI, VFD drives, panel manufacturing, Digitech, Digitech Electrical Automations, Karur';
 }
 $canonicalBase = 'https://dena.co.in/new/';
 $canonicalPath = isset($_SERVER['REQUEST_URI']) ? ltrim($_SERVER['REQUEST_URI'], '/') : 'index.php';
@@ -86,43 +88,87 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : $canonicalBase . $canonic
                                         <ul>
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="about.php">About</a></li>
-                                            <!-- <li class="has-sub">
-                                                <a href="services.html">Solutions</a>
-                                                <ul>
-                                                    <li><a href="services.html#control-panels">Control Panels</a></li>
-                                                    <li><a href="services.html#automation">Industrial Automation</a></li>
-                                                    <li><a href="services.html#products">Industrial Products</a></li>
-                                                    <li><a href="services.html#programming">Programming</a></li>
-                                                </ul>
-                                            </li> -->
                                             <li class="has-sub">
                                                 <a href="panels.php">Panels</a>
                                                 <ul>
                                                     <li><a href="panels.php" class="panel-link">All Panels</a></li>
-                                                    <?php foreach (fe_active_rows($conn, 'tbl_panels') as $navPanel): ?>
-                                                    <li><a href="panel-detail.php?panel=<?php echo urlencode($navPanel['slug']); ?>" class="panel-link"><?php echo clean($navPanel['title']); ?></a></li>
-                                                    <?php endforeach; ?>
+                                                    <li class="has-sub">
+                                                        <a href="panels.php">Power Solutions</a>
+                                                        <ul>
+                                                            <li><a href="panels.php">VCB Panel</a></li>
+                                                            <li><a href="panels.php">MV Panel</a></li>
+                                                            <li><a href="panel-detail.php?panel=pcc-panel" class="panel-link">PCC</a></li>
+                                                            <li><a href="panel-detail.php?panel=mcc-panel" class="panel-link">MCC</a></li>
+                                                            <li><a href="panels.php">SSB</a></li>
+                                                            <li><a href="panel-detail.php?panel=db-panel" class="panel-link">DB</a></li>
+                                                            <li><a href="panel-detail.php?panel=apfc-panel" class="panel-link">APFC</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-sub">
+                                                        <a href="panels.php">Control Engineering</a>
+                                                        <ul>
+                                                            <li><a href="panel-detail.php?panel=plc-panel" class="panel-link">PLC</a></li>
+                                                            <li><a href="panel-detail.php?panel=vfd-panel" class="panel-link">VFD</a></li>
+                                                            <li><a href="panel-detail.php?panel=servo-drive-panel" class="panel-link">Servo</a></li>
+                                                            <li><a href="panel-detail.php?panel=dol-star-delta-panel" class="panel-link">Starter</a></li>
+                                                            <li><a href="panels.php">AMF</a></li>
+                                                            <li><a href="panels.php">Pneumatic &amp; Hydraulic Based</a></li>
+                                                        </ul>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li class="has-sub">
                                                 <a href="products.php">Products</a>
                                                 <ul>
                                                     <li><a href="products.php" class="panel-link">All Products</a></li>
-                                                    <?php foreach (fe_active_rows($conn, 'tbl_products') as $navProduct): ?>
-                                                    <li><a href="product-detail.php?product=<?php echo urlencode($navProduct['slug']); ?>" class="panel-link"><?php echo clean($navProduct['title']); ?></a></li>
-                                                    <?php endforeach; ?>
+                                                    <li class="has-sub">
+                                                        <a href="products.php?brand=delta" class="panel-link">DELTA</a>
+                                                        <ul>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_plc" class="panel-link">Programmable Logic Controller (PLC)</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_hmi" class="panel-link">Human Machine Interface (HMI)</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_text_panel_hmi" class="panel-link">Text Panel HMI</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_vfd" class="panel-link">Variable Frequency Drives (VFD)</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_servo" class="panel-link">Servo Systems</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_scada" class="panel-link">SCADA System</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_motion" class="panel-link">Motion Controller</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_robot" class="panel-link">Robot</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_electric_servo_press" class="panel-link">Electric Servo Press</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_industrial_pc" class="panel-link">Industrial PC</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_mv_drives" class="panel-link">MV Drives</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_temperature" class="panel-link">Temperature Controller</a></li>
+                                                            <li><a href="products.php?brand=delta&amp;subcat=delta_smps" class="panel-link">SMPS</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-sub">
+                                                        <a href="products.php?brand=invt" class="panel-link">INVT</a>
+                                                        <ul>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_vfd" class="panel-link">Variable Frequency Drives (VFD)</a></li>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_plc" class="panel-link">Programmable Logic Controllers (PLC)</a></li>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_hmi" class="panel-link">Human Machine Interface (HMI)</a></li>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_servo" class="panel-link">Servo System</a></li>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_solar" class="panel-link">Solar Drives</a></li>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_mv_drives" class="panel-link">MV Drives</a></li>
+                                                            <li><a href="products.php?brand=invt&amp;subcat=invt_motion" class="panel-link">Motion Controller</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="products.php?brand=multispan" class="panel-link">MULTISPAN</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="products.php?brand=leuze" class="panel-link">LEUZE</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li><a href="programming.php">Programming</a></li>
                                             <li><a href="training.php">Training</a></li>
                                             <li><a href="careers.php">Career</a></li>
-                                            <li><a href="contact.php" class="desktophide">Contact</a></li>
+                                            <li><a href="contact.php">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-5 d-none d-xl-block text-right">
-                                <a href="contact.php" class="btn mr-15" style="padding: 10px 25px;">Contact <i class="fa-light fa-bolt"></i></a>
+                                <img src="img/logo/delta-partner-badge.png" alt="Delta Authorized Channel Partner" class="deltabadge">
                             </div>
 
                             <div class="col-12">
@@ -136,19 +182,5 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : $canonicalBase . $canonic
         </div>
     </header>
     <!-- header-end -->
-    <!-- offcanvas-area -->
-    <!-- <div class="offcanvas-menu">
-        <span class="menu-close"><i class="fas fa-times"></i></span>
-        <form role="search" method="get" id="searchform" class="searchform" action="#">
-            <input type="text" name="s" id="search" placeholder="Search" />
-            <button><i class="fa fa-search"></i></button>
-        </form>
-        <div id="cssmenu2" class="menu-one-page-menu-container">
-            <ul id="menu-one-page-menu-12" class="menu">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="tel:+919787774321"><span>+91 97877 74321</span></a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="mailto:sales.dea@outlook.com"><span>sales.dea@outlook.com</span></a></li>
-            </ul>
-        </div>
-    </div> -->
     <div class="offcanvas-overly"></div>
     <!-- offcanvas-end -->

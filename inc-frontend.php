@@ -8,6 +8,7 @@
 require_once __DIR__ . '/ktgadmin/includes/config.php';
 require_once __DIR__ . '/ktgadmin/includes/db.php';
 require_once __DIR__ . '/ktgadmin/includes/functions.php';
+require_once __DIR__ . '/inc-catalogue.php';
 
 /**
  * Fetch all active rows from a table, ordered for display.
@@ -52,4 +53,14 @@ function fe_setting($conn, $key, $default = '')
     $row = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
     mysqli_stmt_close($stmt);
     return $row ? $row['setting_value'] : $default;
+}
+
+/**
+ * Years of experience shown site-wide (Home, About, meta tags).
+ * Set once in Admin > Settings as 'experience_years'; defaults to 11.
+ */
+function fe_experience_years($conn)
+{
+    $years = (int) fe_setting($conn, 'experience_years', '11');
+    return ($years >= 1 && $years <= 99) ? $years : 11;
 }

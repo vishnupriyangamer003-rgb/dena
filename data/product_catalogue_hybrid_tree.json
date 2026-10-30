@@ -1,0 +1,1690 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Product Catalogue Hybrid Tree",
+  "source": {
+    "file": "WEBSITE.pdf",
+    "pages": 7,
+    "notes": [
+      "Hierarchy is represented as Product (level 0) > Brand (level 1) > Subcategory (level 2) > Category/Series (level 3) > Product (level 4).",
+      "DELTA and INVT have detailed subcategories in the source PDF.",
+      "MULTISPAN and LEUZE are listed as brands, but the PDF does not provide their subcategories or product details.",
+      "Names are retained from the PDF where possible. Minor obvious spelling normalization: 'VT SERES' is represented as 'VT Series'.",
+      "Where the PDF lists a standalone product group without a named model family, a descriptive category node is used to keep the tree consistent."
+    ]
+  },
+  "tree": {
+    "id": "product_root",
+    "name": "Product",
+    "base_name": "Product",
+    "level": 0,
+    "type": "root",
+    "description": "Top-level product catalogue.",
+    "children": [
+      {
+        "id": "brand_delta",
+        "name": "DELTA",
+        "base_name": "DELTA",
+        "level": 1,
+        "type": "brand",
+        "source_pages": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "children": [
+          {
+            "id": "delta_plc",
+            "name": "Programmable Logic Controller (PLC)",
+            "base_name": "Programmable Logic Controller (PLC)",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              3
+            ],
+            "children": [
+              {
+                "id": "delta_plc_dvp_slim",
+                "name": "DVP Series (Slim CPU)",
+                "base_name": "DVP Series (Slim CPU)",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": [
+                  {
+                    "id": "product_dvp_sv3",
+                    "name": "DVP-SV3",
+                    "base_name": "DVP-SV3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_sx3",
+                    "name": "DVP-SX3",
+                    "base_name": "DVP-SX3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_sv2",
+                    "name": "DVP-SV2",
+                    "base_name": "DVP-SV2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_sx2",
+                    "name": "DVP-SX2",
+                    "base_name": "DVP-SX2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_sx",
+                    "name": "DVP-SX",
+                    "base_name": "DVP-SX",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_sa2",
+                    "name": "DVP-SA2",
+                    "base_name": "DVP-SA2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_se2",
+                    "name": "DVP-SE2",
+                    "base_name": "DVP-SE2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_se",
+                    "name": "DVP-SE",
+                    "base_name": "DVP-SE",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_ss2",
+                    "name": "DVP-SS2",
+                    "base_name": "DVP-SS2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "delta_plc_dvp",
+                "name": "DVP Series",
+                "base_name": "DVP Series",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": [
+                  {
+                    "id": "product_dvp_es3",
+                    "name": "DVP-ES3",
+                    "base_name": "DVP-ES3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_ex3",
+                    "name": "DVP-EX3",
+                    "base_name": "DVP-EX3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_es2",
+                    "name": "DVP-ES2",
+                    "base_name": "DVP-ES2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_ec3",
+                    "name": "DVP-EC3",
+                    "base_name": "DVP-EC3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_ec5",
+                    "name": "DVP-EC5",
+                    "base_name": "DVP-EC5",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_eh3",
+                    "name": "DVP-EH3",
+                    "base_name": "DVP-EH3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "delta_plc_as",
+                "name": "AS Series",
+                "base_name": "AS Series",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": [
+                  {
+                    "id": "product_as200_cpu",
+                    "name": "AS200 CPU",
+                    "base_name": "AS200 CPU",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_as300_cpu",
+                    "name": "AS300 CPU",
+                    "base_name": "AS300 CPU",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "delta_plc_ah",
+                "name": "AH Series",
+                "base_name": "AH Series",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": [
+                  {
+                    "id": "product_ah_series_standard_cpu",
+                    "name": "AH Series Standard CPU",
+                    "base_name": "AH Series Standard CPU",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_ah_series_redundant_cpu",
+                    "name": "AH Series Redundant CPU",
+                    "base_name": "AH Series Redundant CPU",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "delta_plc_ax5",
+                "name": "AX-5 Series",
+                "base_name": "AX-5 Series",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": []
+              }
+            ]
+          },
+          {
+            "id": "delta_hmi",
+            "name": "Human Machine Interface (HMI)",
+            "base_name": "Human Machine Interface (HMI)",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              3
+            ],
+            "children": [
+              {
+                "id": "delta_hmi_dop",
+                "name": "DOP Series",
+                "base_name": "DOP Series",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": [
+                  {
+                    "id": "product_dop_300",
+                    "name": "DOP-300",
+                    "base_name": "DOP-300",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_dop_100",
+                    "name": "DOP-100",
+                    "base_name": "DOP-100",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "delta_hmi_tp",
+                "name": "TP Series",
+                "base_name": "TP Series",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3
+                ],
+                "products": [
+                  {
+                    "id": "product_tp_series",
+                    "name": "TP Series",
+                    "base_name": "TP Series",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_text_panel_hmi",
+            "name": "Text Panel HMI",
+            "base_name": "Text Panel HMI",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              3,
+              4
+            ],
+            "children": [
+              {
+                "id": "delta_text_panel_models",
+                "name": "Text Panel Models",
+                "base_name": "Text Panel Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  3,
+                  4
+                ],
+                "products": [
+                  {
+                    "id": "product_tp02g",
+                    "name": "TP02G",
+                    "base_name": "TP02G",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      3
+                    ]
+                  },
+                  {
+                    "id": "product_tp04g",
+                    "name": "TP04G",
+                    "base_name": "TP04G",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_tp04p",
+                    "name": "TP04P",
+                    "base_name": "TP04P",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_tp08g",
+                    "name": "TP08G",
+                    "base_name": "TP08G",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_vfd",
+            "name": "Variable Frequency Drives (VFD)",
+            "base_name": "Variable Frequency Drives (VFD)",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              4
+            ],
+            "children": [
+              {
+                "id": "delta_vfd_models",
+                "name": "VFD Models",
+                "base_name": "VFD Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  4
+                ],
+                "products": [
+                  {
+                    "id": "product_vfd_el_w",
+                    "name": "VFD-EL-W",
+                    "base_name": "VFD-EL-W",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_vfd_el",
+                    "name": "VFD-EL",
+                    "base_name": "VFD-EL",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_vfd_e",
+                    "name": "VFD-E",
+                    "base_name": "VFD-E",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_me300",
+                    "name": "ME300",
+                    "base_name": "ME300",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_ms300",
+                    "name": "MS300",
+                    "base_name": "MS300",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_mh300",
+                    "name": "MH300",
+                    "base_name": "MH300",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_mx300",
+                    "name": "MX300",
+                    "base_name": "MX300",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_c200",
+                    "name": "C200",
+                    "base_name": "C200",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_c2000_plus",
+                    "name": "C2000 PLUS",
+                    "base_name": "C2000 PLUS",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_cp2000",
+                    "name": "CP2000",
+                    "base_name": "CP2000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_ch2000",
+                    "name": "CH2000",
+                    "base_name": "CH2000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_vfd_ve",
+                    "name": "VFD-VE",
+                    "base_name": "VFD-VE",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_reg2000",
+                    "name": "REG2000",
+                    "base_name": "REG2000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_hes",
+                    "name": "HES",
+                    "base_name": "HES",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_vfd_vj",
+                    "name": "VFD-VJ",
+                    "base_name": "VFD-VJ",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_vp3000",
+                    "name": "VP3000",
+                    "base_name": "VP3000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_cfp2000",
+                    "name": "CFP2000",
+                    "base_name": "CFP2000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_afe2000",
+                    "name": "AFE2000",
+                    "base_name": "AFE2000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_ct2000",
+                    "name": "CT2000",
+                    "base_name": "CT2000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_servo",
+            "name": "Servo Systems",
+            "base_name": "Servo Systems",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              4
+            ],
+            "children": [
+              {
+                "id": "delta_servo_models",
+                "name": "Servo Models",
+                "base_name": "Servo Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  4
+                ],
+                "products": [
+                  {
+                    "id": "product_asda_w3",
+                    "name": "ASDA-W3",
+                    "base_name": "ASDA-W3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_asda_a3",
+                    "name": "ASDA-A3",
+                    "base_name": "ASDA-A3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_asda_a2",
+                    "name": "ASDA-A2",
+                    "base_name": "ASDA-A2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_asda_m",
+                    "name": "ASDA-M",
+                    "base_name": "ASDA-M",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_asda_b3",
+                    "name": "ASDA-B3",
+                    "base_name": "ASDA-B3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_asda_b2",
+                    "name": "ASDA-B2",
+                    "base_name": "ASDA-B2",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_asda_e3",
+                    "name": "ASDA-E3",
+                    "base_name": "ASDA-E3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_scada",
+            "name": "SCADA System",
+            "base_name": "SCADA System",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              4
+            ],
+            "children": [
+              {
+                "id": "delta_scada_models",
+                "name": "SCADA Products",
+                "base_name": "SCADA Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  4
+                ],
+                "products": [
+                  {
+                    "id": "product_diaview",
+                    "name": "DIAVIEW",
+                    "base_name": "DIAVIEW",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  },
+                  {
+                    "id": "product_vt_scada",
+                    "name": "VT SCADA",
+                    "base_name": "VT SCADA",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_motion",
+            "name": "Motion Controller",
+            "base_name": "Motion Controller",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              5
+            ],
+            "children": [
+              {
+                "id": "delta_motion_models",
+                "name": "Motion Controller Models",
+                "base_name": "Motion Controller Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  5
+                ],
+                "products": [
+                  {
+                    "id": "product_ax_8__codesys",
+                    "name": "AX-8 (CODESYS)",
+                    "base_name": "AX-8 (CODESYS)",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_ax_3__codesys",
+                    "name": "AX-3 (CODESYS)",
+                    "base_name": "AX-3 (CODESYS)",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_ah_series_motion_cpu",
+                    "name": "AH Series Motion CPU",
+                    "base_name": "AH Series Motion CPU",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_as_series_motion_cpu",
+                    "name": "AS Series Motion CPU",
+                    "base_name": "AS Series Motion CPU",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dvp50mc",
+                    "name": "DVP50MC",
+                    "base_name": "DVP50MC",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dvp15mc",
+                    "name": "DVP15MC",
+                    "base_name": "DVP15MC",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_20pm",
+                    "name": "DVP-20PM",
+                    "base_name": "DVP-20PM",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dvp_10pm",
+                    "name": "DVP-10PM",
+                    "base_name": "DVP-10PM",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_robot",
+            "name": "Robot",
+            "base_name": "Robot",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              5
+            ],
+            "children": [
+              {
+                "id": "delta_robot_models",
+                "name": "Robot Products",
+                "base_name": "Robot Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  5
+                ],
+                "products": [
+                  {
+                    "id": "product_scada_robot",
+                    "name": "SCADA Robot",
+                    "base_name": "SCADA Robot",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_articulated_robot",
+                    "name": "Articulated Robot",
+                    "base_name": "Articulated Robot",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_teach_pendant",
+                    "name": "Teach Pendant",
+                    "base_name": "Teach Pendant",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_robot_controller_with_servo_drive_integrated",
+                    "name": "Robot Controller with Servo Drive Integrated",
+                    "base_name": "Robot Controller with Servo Drive Integrated",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_electric_gripper",
+                    "name": "Electric Gripper",
+                    "base_name": "Electric Gripper",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_electric_servo_press",
+            "name": "Electric Servo Press",
+            "base_name": "Electric Servo Press",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              5
+            ],
+            "children": [
+              {
+                "id": "delta_electric_servo_press_models",
+                "name": "Electric Servo Press Products",
+                "base_name": "Electric Servo Press Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  5
+                ],
+                "products": [
+                  {
+                    "id": "product_electric_servo_press",
+                    "name": "Electric Servo Press",
+                    "base_name": "Electric Servo Press",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_industrial_pc",
+            "name": "Industrial PC",
+            "base_name": "Industrial PC",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              5
+            ],
+            "children": [
+              {
+                "id": "delta_industrial_pc_models",
+                "name": "Industrial PC Products",
+                "base_name": "Industrial PC Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  5
+                ],
+                "products": [
+                  {
+                    "id": "product_industrial_pc",
+                    "name": "Industrial PC",
+                    "base_name": "Industrial PC",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_mv_drives",
+            "name": "MV Drives",
+            "base_name": "MV Drives",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              5
+            ],
+            "children": [
+              {
+                "id": "delta_mv_drives_models",
+                "name": "MV Drive Products",
+                "base_name": "MV Drive Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  5
+                ],
+                "products": [
+                  {
+                    "id": "product_mv_drives",
+                    "name": "MV Drives",
+                    "base_name": "MV Drives",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_temperature",
+            "name": "Temperature Controller",
+            "base_name": "Temperature Controller",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              5
+            ],
+            "children": [
+              {
+                "id": "delta_temperature_models",
+                "name": "Temperature Controller Models",
+                "base_name": "Temperature Controller Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  5
+                ],
+                "products": [
+                  {
+                    "id": "product_dtdm",
+                    "name": "DTDM",
+                    "base_name": "DTDM",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtn",
+                    "name": "DTN",
+                    "base_name": "DTN",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtm",
+                    "name": "DTM",
+                    "base_name": "DTM",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dte",
+                    "name": "DTE",
+                    "base_name": "DTE",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtc",
+                    "name": "DTC",
+                    "base_name": "DTC",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtc3000",
+                    "name": "DTC3000",
+                    "base_name": "DTC3000",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtx500",
+                    "name": "DTX500",
+                    "base_name": "DTX500",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtk",
+                    "name": "DTK",
+                    "base_name": "DTK",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dt3",
+                    "name": "DT3",
+                    "base_name": "DT3",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtb",
+                    "name": "DTB",
+                    "base_name": "DTB",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  },
+                  {
+                    "id": "product_dtv",
+                    "name": "DTV",
+                    "base_name": "DTV",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "delta_smps",
+            "name": "SMPS",
+            "base_name": "SMPS",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "delta_smps_types",
+                "name": "SMPS Types",
+                "base_name": "SMPS Types",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_din_rail",
+                    "name": "DIN Rail",
+                    "base_name": "DIN Rail",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_panel_mount",
+                    "name": "Panel Mount",
+                    "base_name": "Panel Mount",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_open_frame",
+                    "name": "Open Frame",
+                    "base_name": "Open Frame",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_modules",
+                    "name": "Modules",
+                    "base_name": "Modules",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_led_drivers",
+                    "name": "LED Drivers",
+                    "base_name": "LED Drivers",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brand_invt",
+        "name": "INVT",
+        "base_name": "INVT",
+        "level": 1,
+        "type": "brand",
+        "source_pages": [
+          2,
+          6,
+          7
+        ],
+        "children": [
+          {
+            "id": "invt_vfd",
+            "name": "Variable Frequency Drives (VFD)",
+            "base_name": "Variable Frequency Drives (VFD)",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "invt_vfd_models",
+                "name": "VFD Models",
+                "base_name": "VFD Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_gd290",
+                    "name": "GD290",
+                    "base_name": "GD290",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_gd270__fan___pump",
+                    "name": "GD270 (Fan & Pump)",
+                    "base_name": "GD270 (Fan & Pump)",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_gd200a",
+                    "name": "GD200A",
+                    "base_name": "GD200A",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_gd27",
+                    "name": "GD27",
+                    "base_name": "GD27",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_gd20",
+                    "name": "GD20",
+                    "base_name": "GD20",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "invt_plc",
+            "name": "Programmable Logic Controllers (PLC)",
+            "base_name": "Programmable Logic Controllers (PLC)",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "invt_plc_models",
+                "name": "PLC Models",
+                "base_name": "PLC Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_ts600",
+                    "name": "TS600",
+                    "base_name": "TS600",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_tm700",
+                    "name": "TM700",
+                    "base_name": "TM700",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_ivc1l",
+                    "name": "IVC1L",
+                    "base_name": "IVC1L",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "invt_hmi",
+            "name": "Human Machine Interface (HMI)",
+            "base_name": "Human Machine Interface (HMI)",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "invt_hmi_models",
+                "name": "HMI Models",
+                "base_name": "HMI Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_va_series",
+                    "name": "VA Series",
+                    "base_name": "VA Series",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_vs_q_series",
+                    "name": "VS-Q Series",
+                    "base_name": "VS-Q Series",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_vt_series",
+                    "name": "VT Series",
+                    "base_name": "VT Series",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_vk_series",
+                    "name": "VK Series",
+                    "base_name": "VK Series",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_vs_series_integrated",
+                    "name": "VS Series Integrated",
+                    "base_name": "VS Series Integrated",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "invt_servo",
+            "name": "Servo System",
+            "base_name": "Servo System",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "invt_servo_models",
+                "name": "Servo Models",
+                "base_name": "Servo Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_da200_high_performance_servo",
+                    "name": "DA200 High Performance Servo",
+                    "base_name": "DA200 High Performance Servo",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_da180_economy_servo",
+                    "name": "DA180 Economy Servo",
+                    "base_name": "DA180 Economy Servo",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "invt_solar",
+            "name": "Solar Drives",
+            "base_name": "Solar Drives",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "invt_solar_models",
+                "name": "Solar Drive Models",
+                "base_name": "Solar Drive Models",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_sp100_solar_pump_inverter",
+                    "name": "SP100 Solar Pump Inverter",
+                    "base_name": "SP100 Solar Pump Inverter",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_gd100_pv",
+                    "name": "GD100-PV",
+                    "base_name": "GD100-PV",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_spc_series",
+                    "name": "SPC Series",
+                    "base_name": "SPC Series",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  },
+                  {
+                    "id": "product_gd170_pv",
+                    "name": "GD170-PV",
+                    "base_name": "GD170-PV",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "invt_mv_drives",
+            "name": "MV Drives",
+            "base_name": "MV Drives",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              6
+            ],
+            "children": [
+              {
+                "id": "invt_mv_drives_models",
+                "name": "MV Drive Products",
+                "base_name": "MV Drive Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  6
+                ],
+                "products": [
+                  {
+                    "id": "product_mv_drives",
+                    "name": "MV Drives",
+                    "base_name": "MV Drives",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "invt_motion",
+            "name": "Motion Controller",
+            "base_name": "Motion Controller",
+            "level": 2,
+            "type": "subcategory",
+            "source_pages": [
+              7
+            ],
+            "children": [
+              {
+                "id": "invt_motion_models",
+                "name": "Motion Controller Products",
+                "base_name": "Motion Controller Products",
+                "level": 3,
+                "type": "category",
+                "source_pages": [
+                  7
+                ],
+                "products": [
+                  {
+                    "id": "product_motion_controller",
+                    "name": "Motion Controller",
+                    "base_name": "Motion Controller",
+                    "level": 4,
+                    "type": "product",
+                    "source_pages": [
+                      7
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brand_multispan",
+        "name": "MULTISPAN",
+        "base_name": "MULTISPAN",
+        "level": 1,
+        "type": "brand",
+        "description": "Brand is listed in the PDF, but no subcategory or product details are provided.",
+        "source_pages": [
+          2
+        ],
+        "children": []
+      },
+      {
+        "id": "brand_leuze",
+        "name": "LEUZE",
+        "base_name": "LEUZE",
+        "level": 1,
+        "type": "brand",
+        "description": "Brand is listed in the PDF, but no subcategory or product details are provided.",
+        "source_pages": [
+          2
+        ],
+        "children": []
+      }
+    ]
+  }
+}

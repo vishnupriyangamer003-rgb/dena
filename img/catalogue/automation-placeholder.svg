@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="100%" height="100%">
+    <defs>
+        <!-- Background Gradient -->
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f172a"/>
+            <stop offset="50%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#090d16"/>
+        </linearGradient>
+        <!-- Body Gradient -->
+        <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#334155"/>
+            <stop offset="100%" stop-color="#1e293b"/>
+        </linearGradient>
+        <!-- Ambient Glow -->
+        <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#0284c7" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+        </radialGradient>
+        <!-- Tech Grid Pattern -->
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.7" opacity="0.35"/>
+        </pattern>
+    </defs>
+
+    <!-- Canvas Background -->
+    <rect width="480" height="400" fill="url(#bgGrad)"/>
+    <rect width="480" height="400" fill="url(#glow)"/>
+    <rect width="480" height="400" fill="url(#grid)"/>
+
+    <!-- Subtle Tech Borders -->
+    <rect x="15" y="15" width="450" height="370" rx="8" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+    <!-- Hardware Illustration -->
+    
+            <rect x="130" y="80" width="220" height="240" rx="10" fill="url(#bodyGrad)" stroke="#475569" stroke-width="3"/>
+            <circle cx="240" cy="180" r="50" fill="#1e293b" stroke="#0284c7" stroke-width="4"/>
+            <path d="M 240 145 L 240 215 M 205 180 L 275 180" stroke="#f59e0b" stroke-width="4"/>
+            <rect x="155" y="255" width="170" height="35" rx="4" fill="#020617"/>
+            <text x="180" y="277" font-family="Arial,sans-serif" font-size="12" fill="#38bdf8" font-weight="bold">INDUSTRIAL SPEC</text>
+            
+
+    <!-- Product Title Badge at Bottom -->
+    <rect x="30" y="340" width="420" height="36" rx="6" fill="#0b1329" stroke="#1e293b"/>
+    <text x="45" y="363" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Digitech Industrial Hardware</text>
+    <text x="435" y="363" text-anchor="end" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f59e0b">Authorized Partner</text>
+</svg>
