@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n '^$panels = \\\\|^$products = \\\\|^$programs = \\\\|^$trainings = \\\\|^$jobs = \\\\|legacy/img/brand' build_sql.php)"
+    ]
+  }
+}

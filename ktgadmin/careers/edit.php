@@ -1,0 +1,74 @@
+<?php
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/auth.php';
+require_once __DIR__ . '/../includes/functions.php';
+
+$id = (int) ($_GET['id'] ?? 0);
+$stmt = mysqli_prepare($conn, 'SELECT * FROM tbl_careers WHERE id = ?');
+mysqli_stmt_bind_param($stmt, 'i', $id);
+mysqli_stmt_execute($stmt);
+$item = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
+
+if (!$item) {
+    flash_set('error', 'Vacancy not found.');
+    header('Location: index.php');
+    exit;
+}
+
+$pageTitle = 'Edit Vacancy';
+$activeModule = 'careers';
+require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/../includes/sidebar.php';
+?>
+<div class="page-header">
+    <h1>Edit Vacancy</h1>
+    <a href="index.php" class="btn btn-outline-secondary"><i class="fa-light fa-arrow-left"></i> Back to List</a>
+</div>
+
+<div class="admin-card">
+    <form class="ajax-form" action="../ajax/careers.php" method="post" data-redirect="index.php">
+        <?php echo csrf_field(); ?>
+        <input type="hidden" name="action" value="edit">
+        <input type="hidden" name="id" value="<?php echo $item['id']; ?>">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <label class="form-label required">Job Title</label>
+                    <input type="text" name="title" id="titleInput" class="form-control" required value="<?php echo clean($item['title']); ?>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Slug (URL)</label>
+                    <input type="text" name="slug" id="slugInput" class="form-control" value="<?php echo clean($item['slug']); ?>">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Location</label>
+                            <input type="text" name="location" class="form-control" value="<?php echo clean($item['location']); ?>">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Experience</label>
+                            <input type="text" name="experience" class="form-control" value="<?php echo clean($item['experience']); ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label required">Description</label>
+                    <textarea name="description" class="form-control" rows="3" required><?php echo clean($item['description']); ?></textarea>
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input type="checkbox" class="form-check-input" id="statusCheck" name="status" value="1" <?php echo $item['status'] ? 'checked' : ''; ?>>
+                    <label class="form-check-label" for="statusCheck">Active</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-admin-primary"><i class="fa-light fa-floppy-disk"></i> Update</button>
+        <a href="index.php" class="btn btn-outline-secondary">Cancel</a>
+    </form>
+</div>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
