@@ -13,9 +13,9 @@ if (!csrf_verify($_POST['csrf_token'] ?? '')) {
 function product_meta($title, $description)
 {
     return [
-        'title' => $title . ' Supplier - Industrial Products | DENA',
-        'description' => $title . ' supplied by Digitech Electrical & Automations (DENA). ' . $description,
-        'keywords' => strtolower($title) . ', ' . strtolower($title) . ' supplier, industrial ' . strtolower($title) . ', DENA products Karur',
+        'title' => $title . ' Supplier - Industrial Products | Digitech',
+        'description' => $title . ' supplied by Digitech Electrical & Automations. ' . $description,
+        'keywords' => strtolower($title) . ', ' . strtolower($title) . ' supplier, industrial ' . strtolower($title) . ', Digitech products Karur',
     ];
 }
 

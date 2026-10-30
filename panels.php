@@ -2,8 +2,8 @@
 require_once __DIR__ . '/inc-frontend.php';
 $panels = fe_active_rows($conn, 'tbl_panels');
 
-$pageTitle = 'Electrical Control Panels - PLC, MCC, PCC, VFD, APFC & More | DENA';
-$metaDescription = 'Explore DENA\'s complete range of electrical control panels - PLC, MCC, PCC, APFC, VFD, DB, Servo Drive, MCB, Relay Logic, Street Light Control and Starter panels.';
+$pageTitle = 'Electrical Control Panels - PLC, MCC, PCC, VFD, APFC & More | Digitech';
+$metaDescription = 'Explore Digitech\'s complete range of electrical control panels - PLC, MCC, PCC, APFC, VFD, DB, Servo Drive, MCB, Relay Logic, Street Light Control and Starter panels.';
 $metaKeywords = 'PLC panel, MCC panel, PCC panel, APFC panel, VFD panel, DB panel, servo drive panel, MCB panel, relay logic panel, street light control panel, control panel manufacturer';
 include('header.php');
 ?>

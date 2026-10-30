@@ -31,6 +31,14 @@ require_once __DIR__ . '/../includes/sidebar.php';
                     <small class="text-muted">Leave blank to auto-generate from title.</small>
                 </div>
                 <div class="mb-3">
+                    <label class="form-label required">Category</label>
+                    <select name="category" class="form-select" required>
+                        <option value="power-solutions">Power Solutions</option>
+                        <option value="control-engineering">Control Engineering</option>
+                    </select>
+                    <small class="text-muted">Used for the menu groups and the filter on the Panels page.</small>
+                </div>
+                <div class="mb-3">
                     <label class="form-label required">Short Description</label>
                     <textarea name="short_description" class="form-control" rows="2" required></textarea>
                 </div>

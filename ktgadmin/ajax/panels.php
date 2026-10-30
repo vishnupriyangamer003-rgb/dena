@@ -13,9 +13,9 @@ if (!csrf_verify($_POST['csrf_token'] ?? '')) {
 function panel_meta($title, $shortDescription)
 {
     return [
-        'title' => $title . ' - Electrical Control Panel Manufacturer | DENA',
-        'description' => $shortDescription . ' Engineered and manufactured by Digitech Electrical & Automations (DENA).',
-        'keywords' => strtolower($title) . ', ' . strtolower($title) . ' manufacturer, electrical control panel, DENA panel manufacturer, industrial control panel Karur',
+        'title' => $title . ' - Electrical Control Panel Manufacturer | Digitech',
+        'description' => $shortDescription . ' Engineered and manufactured by Digitech Electrical & Automations.',
+        'keywords' => strtolower($title) . ', ' . strtolower($title) . ' manufacturer, electrical control panel, Digitech panel manufacturer, industrial control panel Karur',
     ];
 }
 
@@ -28,6 +28,7 @@ if ($action === 'add' || $action === 'edit') {
     $specsJson = $_POST['specs_json'] ?? '{}';
     $applicationsJson = $_POST['applications_json'] ?? '[]';
     $featuresJson = $_POST['features_json'] ?? '[]';
+    $category = ($_POST['category'] ?? '') === 'control-engineering' ? 'control-engineering' : 'power-solutions';
 
     if ($title === '' || $shortDescription === '') {
         json_response(false, ['message' => 'Title and short description are required.']);
@@ -61,8 +62,8 @@ if ($action === 'add' || $action === 'edit') {
         $nextOrderResult = mysqli_query($conn, 'SELECT COALESCE(MAX(display_order), 0) + 1 AS n FROM tbl_panels');
         $displayOrder = (int) mysqli_fetch_assoc($nextOrderResult)['n'];
         $status = isset($_POST['status']) ? 1 : 0;
-        $stmt = mysqli_prepare($conn, 'INSERT INTO tbl_panels (slug, title, short_description, image, overview, specs, applications, features, meta_title, meta_description, meta_keywords, display_order, status, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())');
-        mysqli_stmt_bind_param($stmt, 'sssssssssssii', $slug, $title, $shortDescription, $imagePath, $overview, $specs, $applications, $features, $metaTitle, $metaDescription, $metaKeywords, $displayOrder, $status);
+        $stmt = mysqli_prepare($conn, 'INSERT INTO tbl_panels (slug, title, category, short_description, image, overview, specs, applications, features, meta_title, meta_description, meta_keywords, display_order, status, created_at, updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,NOW(),NOW())');
+        mysqli_stmt_bind_param($stmt, 'ssssssssssssii', $slug, $title, $category, $shortDescription, $imagePath, $overview, $specs, $applications, $features, $metaTitle, $metaDescription, $metaKeywords, $displayOrder, $status);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         json_response(true, ['message' => 'Panel added successfully.']);
@@ -74,16 +75,16 @@ if ($action === 'add' || $action === 'edit') {
         $status = isset($_POST['status']) ? 1 : 0;
         if ($imagePath) {
             $old = mysqli_fetch_assoc(mysqli_query($conn, 'SELECT image FROM tbl_panels WHERE id = ' . $id));
-            $stmt = mysqli_prepare($conn, 'UPDATE tbl_panels SET slug=?, title=?, short_description=?, image=?, overview=?, specs=?, applications=?, features=?, meta_title=?, meta_description=?, meta_keywords=?, status=?, updated_at=NOW() WHERE id=?');
-            mysqli_stmt_bind_param($stmt, 'sssssssssssii', $slug, $title, $shortDescription, $imagePath, $overview, $specs, $applications, $features, $metaTitle, $metaDescription, $metaKeywords, $status, $id);
+            $stmt = mysqli_prepare($conn, 'UPDATE tbl_panels SET slug=?, title=?, category=?, short_description=?, image=?, overview=?, specs=?, applications=?, features=?, meta_title=?, meta_description=?, meta_keywords=?, status=?, updated_at=NOW() WHERE id=?');
+            mysqli_stmt_bind_param($stmt, 'ssssssssssssii', $slug, $title, $category, $shortDescription, $imagePath, $overview, $specs, $applications, $features, $metaTitle, $metaDescription, $metaKeywords, $status, $id);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             if ($old) {
                 delete_upload($old['image']);
             }
         } else {
-            $stmt = mysqli_prepare($conn, 'UPDATE tbl_panels SET slug=?, title=?, short_description=?, overview=?, specs=?, applications=?, features=?, meta_title=?, meta_description=?, meta_keywords=?, status=?, updated_at=NOW() WHERE id=?');
-            mysqli_stmt_bind_param($stmt, 'ssssssssssii', $slug, $title, $shortDescription, $overview, $specs, $applications, $features, $metaTitle, $metaDescription, $metaKeywords, $status, $id);
+            $stmt = mysqli_prepare($conn, 'UPDATE tbl_panels SET slug=?, title=?, category=?, short_description=?, overview=?, specs=?, applications=?, features=?, meta_title=?, meta_description=?, meta_keywords=?, status=?, updated_at=NOW() WHERE id=?');
+            mysqli_stmt_bind_param($stmt, 'sssssssssssii', $slug, $title, $category, $shortDescription, $overview, $specs, $applications, $features, $metaTitle, $metaDescription, $metaKeywords, $status, $id);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }

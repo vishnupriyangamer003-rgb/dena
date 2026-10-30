@@ -10,7 +10,7 @@ $adminUsername = $_SESSION['admin_username'] ?? 'Admin';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo isset($pageTitle) ? clean($pageTitle) . ' - ' : ''; ?>DENA Admin</title>
+    <title><?php echo isset($pageTitle) ? clean($pageTitle) . ' - ' : ''; ?>Digitech Admin</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo SITE_URL; ?>/img/logo/dena-favicon.png">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/fontawesome-pro/css/all.min.css">
@@ -23,7 +23,7 @@ $adminUsername = $_SESSION['admin_username'] ?? 'Admin';
             <i class="fa-light fa-bars"></i>
         </button>
         <div class="admin-topbar-brand">
-            <img src="<?php echo SITE_URL; ?>/img/logo/dena-logo-png.png" alt="DENA">
+            <img src="<?php echo SITE_URL; ?>/img/logo/dena-logo-png.png" alt="Digitech">
         </div>
         <div class="admin-topbar-profile dropdown">
             <button class="btn dropdown-toggle admin-profile-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -56,6 +56,14 @@ require_once __DIR__ . '/../includes/sidebar.php';
                     <input type="text" name="slug" id="slugInput" class="form-control" value="<?php echo clean($item['slug']); ?>">
                 </div>
                 <div class="mb-3">
+                    <label class="form-label required">Category</label>
+                    <select name="category" class="form-select" required>
+                        <option value="power-solutions" <?php echo ($item['category'] ?? '') === 'power-solutions' ? 'selected' : ''; ?>>Power Solutions</option>
+                        <option value="control-engineering" <?php echo ($item['category'] ?? '') === 'control-engineering' ? 'selected' : ''; ?>>Control Engineering</option>
+                    </select>
+                    <small class="text-muted">Used for the menu groups and the filter on the Panels page.</small>
+                </div>
+                <div class="mb-3">
                     <label class="form-label required">Short Description</label>
                     <textarea name="short_description" class="form-control" rows="2" required><?php echo clean($item['short_description']); ?></textarea>
                 </div>

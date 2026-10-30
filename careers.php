@@ -1,11 +1,11 @@
 <?php
 require_once __DIR__ . '/inc-frontend.php';
 $jobs = fe_active_rows($conn, 'tbl_careers');
-$careersCvEmail = fe_setting($conn, 'careers_cv_email', 'sales.dea@outlook.com');
+$careersCvEmail = fe_setting($conn, 'careers_cv_email', 'info@dena.co.in');
 
-$pageTitle = 'Careers - Job Openings at Digitech Electrical & Automations (DENA)';
-$metaDescription = 'Explore current job openings at DENA including Electrical Design Engineer, PLC/SCADA Programmer, Panel Wiring Technician and more. Send your CV to sales.dea@outlook.com.';
-$metaKeywords = 'DENA careers, electrical engineer jobs Karur, PLC programmer jobs, panel wiring technician jobs, automation engineer jobs Tamil Nadu, electrical company jobs';
+$pageTitle = 'Careers - Job Openings at Digitech Electrical & Automations';
+$metaDescription = 'Explore current job openings at Digitech including Electrical Design Engineer, PLC/SCADA Programmer, Panel Wiring Technician and more. Send your CV to ' . $careersCvEmail . '.';
+$metaKeywords = 'Digitech careers, electrical engineer jobs Karur, PLC programmer jobs, panel wiring technician jobs, automation engineer jobs Tamil Nadu, electrical company jobs';
 include('header.php');
 ?>
     <!-- main-area -->
@@ -42,7 +42,7 @@ include('header.php');
                 <div class="row justify-content-center">
                     <div class="col-lg-7 col-md-12">
                         <div class="section-title text-center wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
-                            <div class="sub-title"> <i class="fa-light fa-bolt"></i> Careers at DENA <i class="fa-light fa-bolt"></i></div>
+                            <div class="sub-title"> <i class="fa-light fa-bolt"></i> Careers at Digitech <i class="fa-light fa-bolt"></i></div>
                             <h2 class="text-anime-style-3">Current <span>Openings</span></h2>
                         </div>
                     </div>

@@ -2,9 +2,9 @@
 require_once __DIR__ . '/inc-frontend.php';
 $trainings = fe_active_rows($conn, 'tbl_training');
 
-$pageTitle = 'Training Programs - Electrical & Automation Skill Development | DENA';
-$metaDescription = 'Practical, industry-focused training programs at DENA covering PLC programming, industrial automation, panel wiring, SCADA/HMI and motor & drives maintenance.';
-$metaKeywords = 'electrical training Karur, PLC training, industrial automation training, panel wiring training, SCADA HMI training, apprenticeship program, DENA training';
+$pageTitle = 'Training Programs - Electrical & Automation Skill Development | Digitech';
+$metaDescription = 'Practical, industry-focused training programs at Digitech covering PLC programming, industrial automation, panel wiring, SCADA/HMI and motor & drives maintenance.';
+$metaKeywords = 'electrical training Karur, PLC training, industrial automation training, panel wiring training, SCADA HMI training, apprenticeship program, Digitech training';
 include('header.php');
 ?>
     <!-- main-area -->

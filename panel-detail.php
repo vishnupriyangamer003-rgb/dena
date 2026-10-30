@@ -20,7 +20,7 @@ $applications = decode_list($panelRow['applications']);
 $features = decode_list($panelRow['features']);
 $overview = $panelRow['overview'];
 
-$pageTitle = $panelRow['meta_title'] ?: ($panelRow['title'] . ' - Electrical Control Panel Manufacturer | DENA');
+$pageTitle = $panelRow['meta_title'] ?: ($panelRow['title'] . ' - Electrical Control Panel Manufacturer | Digitech');
 $metaDescription = $panelRow['meta_description'] ?: $panelRow['short_description'];
 $metaKeywords = $panelRow['meta_keywords'] ?: strtolower($panelRow['title']);
 include('header.php');

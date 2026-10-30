@@ -1,6 +1,6 @@
 <?php
 /**
- * Core configuration for the DENA admin panel (ktgadmin).
+ * Core configuration for the Digitech admin panel (ktgadmin).
  * This file must be the first include on every entry-point page.
  */
 

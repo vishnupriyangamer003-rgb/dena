@@ -7,12 +7,21 @@
                             <div class="f-widget-title mb-30">
                                 <img src="img/logo/dena-logo-png.png" alt="Digitech Electrical & Automations" class="headerlogo">
                             </div>
-                            <p class="pr-90">Digitech Electrical & Automations (DENA) delivers reliable electrical, control panel and industrial automation solutions for modern industries.</p>
+                            <p class="pr-90">Digitech Electrical & Automations delivers reliable electrical, control panel and industrial automation solutions for modern industries.</p>
                             <div class="footer-social mt-30">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <?php
+                                $footerSocials = [
+                                    'facebook_url' => 'fab fa-facebook-f',
+                                    'instagram_url' => 'fab fa-instagram',
+                                    'twitter_url' => 'fa-brands fa-x-twitter',
+                                    'linkedin_url' => 'fab fa-linkedin-in',
+                                ];
+                                foreach ($footerSocials as $socialKey => $socialIcon):
+                                    $socialUrl = trim(fe_setting($conn, $socialKey, '#'));
+                                    if ($socialUrl === '') { $socialUrl = '#'; }
+                                ?>
+                                <a href="<?php echo htmlspecialchars($socialUrl); ?>"<?php echo $socialUrl !== '#' ? ' target="_blank" rel="noopener"' : ''; ?> aria-label="<?php echo htmlspecialchars(ucwords(str_replace(['_url', '-'], ['', ' '], $socialKey))); ?>"><i class="<?php echo $socialIcon; ?>"></i></a>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
@@ -95,14 +104,28 @@
     </footer>
     <!-- footer-end -->
 
-    <?php $whatsappNumber = fe_setting($conn, 'whatsapp_number', '919787774321'); ?>
-    <!-- whatsapp-float -->
-    <a href="https://wa.me/<?php echo htmlspecialchars($whatsappNumber); ?>?text=Hello%20DENA%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <span class="whatsapp-ping"></span>
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Chat with us</span>
-    </a>
-    <!-- whatsapp-float-end -->
+    <?php
+    $whatsappNumber = fe_setting($conn, 'whatsapp_number', '919787774321');
+    $linkedinUrl = fe_setting($conn, 'linkedin_url', '#');
+    if ($linkedinUrl === '') {
+        $linkedinUrl = '#';
+    }
+    ?>
+    <!-- social-float -->
+    <div class="social-float">
+        <a href="<?php echo htmlspecialchars($linkedinUrl); ?>" target="_blank" rel="noopener" class="social-float-btn linkedin-float-btn" aria-label="Follow us on LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="social-float-label">LinkedIn</span>
+            <span class="social-float-tooltip">Follow us on LinkedIn</span>
+        </a>
+        <a href="https://wa.me/<?php echo htmlspecialchars($whatsappNumber); ?>?text=Hello%20Digitech%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener" class="social-float-btn whatsapp-float-btn" aria-label="Chat on WhatsApp">
+            <span class="whatsapp-ping"></span>
+            <i class="fab fa-whatsapp"></i>
+            <span class="social-float-label">WhatsApp</span>
+            <span class="social-float-tooltip">Chat with us</span>
+        </a>
+    </div>
+    <!-- social-float-end -->
 
     <!-- enquire-float -->
     <button type="button" class="enquire-float" data-bs-toggle="modal" data-bs-target="#enquireModal">

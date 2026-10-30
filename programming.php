@@ -2,9 +2,9 @@
 require_once __DIR__ . '/inc-frontend.php';
 $programs = fe_active_rows($conn, 'tbl_programming');
 
-$pageTitle = 'Automation Programming Services - SCADA, PLC/HMI, VFD & Servo Drive | DENA';
-$metaDescription = 'DENA offers automation programming and commissioning services - SCADA systems, PLC/HMI programming, VFD drive configuration and servo drive motion control.';
-$metaKeywords = 'SCADA programming, PLC programming, HMI programming, VFD drive configuration, servo drive programming, automation commissioning, DENA programming services';
+$pageTitle = 'Automation Programming Services - SCADA, PLC/HMI, VFD & Servo Drive | Digitech';
+$metaDescription = 'Digitech offers automation programming and commissioning services - SCADA systems, PLC/HMI programming, VFD drive configuration and servo drive motion control.';
+$metaKeywords = 'SCADA programming, PLC programming, HMI programming, VFD drive configuration, servo drive programming, automation commissioning, Digitech programming services';
 include('header.php');
 ?>
     <!-- main-area -->

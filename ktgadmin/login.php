@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Login - DENA</title>
+    <title>Admin Login - Digitech</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo SITE_URL; ?>/img/logo/dena-favicon.png">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/fontawesome-pro/css/all.min.css">
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="login-page">
     <div class="login-card">
         <div class="logo">
-            <img src="<?php echo SITE_URL; ?>/img/logo/dena-logo-png.png" alt="DENA">
+            <img src="<?php echo SITE_URL; ?>/img/logo/dena-logo-png.png" alt="Digitech">
         </div>
         <h2>Admin Login</h2>
         <?php if ($error): ?>

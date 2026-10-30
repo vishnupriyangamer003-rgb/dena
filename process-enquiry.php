@@ -45,7 +45,7 @@ $settingResult = mysqli_query($conn, "SELECT setting_value FROM tbl_settings WHE
 $settingRow = mysqli_fetch_assoc($settingResult);
 $whatsappNumber = $settingRow['setting_value'] ?? '919787774321';
 
-$lines = ['New Enquiry from DENA Website', 'Name: ' . $name, 'Phone: ' . $phone];
+$lines = ['New Enquiry from Digitech Website', 'Name: ' . $name, 'Phone: ' . $phone];
 if ($email !== '') {
     $lines[] = 'Email: ' . $email;
 }

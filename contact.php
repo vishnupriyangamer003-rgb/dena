@@ -1,7 +1,22 @@
 <?php
-$pageTitle = 'Contact Us - Digitech Electrical & Automations (DENA)';
-$metaDescription = 'Get in touch with DENA for electrical control panels and industrial automation requirements. Head office in Karur, with branches in Madurai and Coimbatore, Tamil Nadu.';
-$metaKeywords = 'contact DENA, electrical panel manufacturer contact, Karur electrical company, Madurai automation company, Coimbatore electrical panels, DENA phone email address';
+require_once __DIR__ . '/inc-frontend.php';
+$siteEmail = fe_setting($conn, 'site_email', 'info@dena.co.in');
+$sitePhones = [];
+foreach (['site_phone1', 'site_phone2', 'site_phone3'] as $phoneKey) {
+    $phoneValue = trim(fe_setting($conn, $phoneKey, ''));
+    if ($phoneValue !== '') {
+        $sitePhones[] = $phoneValue;
+    }
+}
+$headOfficeAddress = fe_setting($conn, 'head_office_address', 'No.116/1, II Floor, IOB Upstairs, Thanthonimalai, Karur - 639 005. Tamil Nadu, India.');
+$maduraiBranchAddress = fe_setting($conn, 'branch_madurai_address', 'No.4/46-12, Dindigul NH Road, Near Manna Food Pvt Ltd, Nagari, Madurai - 625 221');
+$coimbatoreBranchAddress = fe_setting($conn, 'branch_coimbatore_address', 'No.390/7, Vinayagar Garden, Malumichampatti, Coimbatore - 641 050');
+$workingHoursWeekday = fe_setting($conn, 'working_hours_weekday', 'Mon - Sat: 9:00 AM - 6:30 PM');
+$workingHoursSunday = fe_setting($conn, 'working_hours_sunday', 'Sunday: Closed');
+$mapEmbedUrl = fe_setting($conn, 'map_embed_url', 'https://www.google.com/maps?q=No.116/1,+IOB+Upstairs,+Thanthonimalai,+Karur+639005&output=embed');
+$pageTitle = 'Contact Us - Digitech Electrical & Automations';
+$metaDescription = 'Get in touch with Digitech for electrical control panels and industrial automation requirements. Head office in Karur, with branches in Madurai and Coimbatore, Tamil Nadu.';
+$metaKeywords = 'contact Digitech, electrical panel manufacturer contact, Karur electrical company, Madurai automation company, Coimbatore electrical panels, Digitech phone email address';
 include('header.php');
 ?>
     <!-- main-area -->
@@ -40,31 +55,38 @@ include('header.php');
                         <div class="contact-info-card mb-30">
                             <div class="icon"><i class="fa-light fa-phone"></i></div>
                             <h3>Call Us</h3>
-                            <p><a href="tel:+919787774321">+91 97877 74321</a></p>
-                            <p><a href="tel:+919677377488">+91 96773 77488</a></p>
-                            <p><a href="tel:+919677381565">+91 96773 81565</a></p>
+                            <div class="contact-phone-list">
+                                <?php foreach ($sitePhones as $sitePhone): ?>
+                                <a href="tel:<?php echo clean(preg_replace('/[^0-9+]/', '', $sitePhone)); ?>" class="contact-phone-chip">
+                                    <i class="fa-light fa-phone"></i>
+                                    <span><?php echo clean($sitePhone); ?></span>
+                                    <i class="fa-light fa-arrow-right"></i>
+                                </a>
+                                <?php endforeach; ?>
+                            </div>
+                            <p class="contact-phone-hint">Tap any number to call</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="contact-info-card mb-30">
                             <div class="icon"><i class="fa-light fa-envelope"></i></div>
                             <h3>Email Us</h3>
-                            <p><a href="mailto:sales.dea@outlook.com">sales.dea@outlook.com</a></p>
+                            <p><a href="mailto:<?php echo clean($siteEmail); ?>"><?php echo clean($siteEmail); ?></a></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="contact-info-card mb-30">
                             <div class="icon"><i class="fa-light fa-map-marker-check"></i></div>
                             <h3>Head Office</h3>
-                            <p>No.116/1, II Floor, IOB Upstairs, Thanthonimalai, Karur - 639 005. Tamil Nadu, India.</p>
+                            <p><?php echo clean($headOfficeAddress); ?></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="contact-info-card mb-30">
                             <div class="icon"><i class="fa-light fa-clock"></i></div>
                             <h3>Working Hours</h3>
-                            <p>Mon - Sat: 9:00 AM - 6:30 PM</p>
-                            <p>Sunday: Closed</p>
+                            <p><?php echo clean($workingHoursWeekday); ?></p>
+                            <p><?php echo clean($workingHoursSunday); ?></p>
                         </div>
                     </div>
                 </div>
@@ -175,20 +197,24 @@ include('header.php');
                     </div>
                     <div class="col-lg-6 col-md-12 mb-30">
                         <div class="contact-map-wrap">
-                            <iframe src="https://www.google.com/maps?q=No.116/1,+IOB+Upstairs,+Thanthonimalai,+Karur+639005&output=embed" width="100%" height="280" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="DENA Head Office Map"></iframe>
+                            <iframe src="<?php echo clean($mapEmbedUrl); ?>" width="100%" height="280" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Digitech Head Office Map"></iframe>
                             <div class="office-list mt-20">
                                 <div class="office-item">
                                     <h4><i class="fa-light fa-location-dot"></i> Head Office - Karur</h4>
-                                    <p>No.116/1, II Floor, IOB Upstairs, Thanthonimalai, Karur - 639 005</p>
+                                    <p><?php echo clean($headOfficeAddress); ?></p>
                                 </div>
+                                <?php if ($maduraiBranchAddress !== ''): ?>
                                 <div class="office-item">
                                     <h4><i class="fa-light fa-location-dot"></i> Branch - Madurai</h4>
-                                    <p>No.4/46-12, Dindigul NH Road, Near Manna Food Pvt Ltd, Nagari, Madurai - 625 221</p>
+                                    <p><?php echo clean($maduraiBranchAddress); ?></p>
                                 </div>
+                                <?php endif; ?>
+                                <?php if ($coimbatoreBranchAddress !== ''): ?>
                                 <div class="office-item">
                                     <h4><i class="fa-light fa-location-dot"></i> Branch - Coimbatore</h4>
-                                    <p>No.390/7, Vinayagar Garden, Malumichampatti, Coimbatore - 641 050</p>
+                                    <p><?php echo clean($coimbatoreBranchAddress); ?></p>
                                 </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

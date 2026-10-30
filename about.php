@@ -1,7 +1,9 @@
 <?php
-$pageTitle = 'About Us - Digitech Electrical & Automations (DENA)';
-$metaDescription = 'Learn about DENA - 25+ years of engineering experience delivering reliable electrical control panels and industrial automation solutions across Tamil Nadu and beyond.';
-$metaKeywords = 'about DENA, Digitech Electrical Automations, electrical panel manufacturer Karur, industrial automation company, electrical engineering company Tamil Nadu';
+require_once __DIR__ . '/inc-frontend.php';
+$expYears = fe_experience_years($conn);
+$pageTitle = 'About Us - Digitech Electrical & Automations';
+$metaDescription = 'Learn about Digitech - ' . $expYears . '+ years of engineering experience delivering reliable electrical control panels and industrial automation solutions across Tamil Nadu and beyond.';
+$metaKeywords = 'about Digitech, Digitech Electrical Automations, electrical panel manufacturer Karur, industrial automation company, electrical engineering company Tamil Nadu';
 include('header.php');
 ?>
     <!-- main-area -->
@@ -91,25 +93,19 @@ include('header.php');
         <section class="about-stats-area p-relative">
             <div class="container">
                 <div class="row about-stats-row">
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-4 col-6">
                         <div class="stat-box">
-                            <h3><span class="count">25</span>+</h3>
+                            <h3><span class="count"><?php echo $expYears; ?></span>+</h3>
                             <p>Years of Experience</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-4 col-6">
                         <div class="stat-box">
-                            <h3><span class="count">500</span>+</h3>
+                            <h3><span class="count">750</span>+</h3>
                             <p>Panels Delivered</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="stat-box">
-                            <h3><span class="count">15</span>+</h3>
-                            <p>Industries Served</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-4 col-6">
                         <div class="stat-box">
                             <h3><span class="count">300</span>+</h3>
                             <p>Projects Completed</p>
